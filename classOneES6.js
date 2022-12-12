@@ -1,3 +1,4 @@
+// version with just two classes: the base one and the executive one
 class BaseClass {
     constructor(value = 0) {
         this.value = value;
@@ -37,7 +38,6 @@ class BaseClass {
         return randomNumber;
     }
 }
-
 class IntBuilder extends BaseClass {
     constructor(value = 0) {
         super(value);

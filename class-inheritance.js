@@ -1,3 +1,5 @@
+
+//version where classes and prototypes are partially combined - as far as methods allow for that (depending on the arguments passed)
 function BaseClass(value = ''){
     this.value = value;
 }
@@ -77,7 +79,7 @@ testIntBuilder
     .get()
 
 // console.log(testIntBuilder.value)
-console.log(IntBuilder.random(10, 2))
+// console.log(IntBuilder.random(10, 2))
 
 //ES5 Prototypes
 function StringBuilder(value = '') {
