@@ -45,7 +45,6 @@ BaseClass.prototype.get = function() {
 }
 
 //ES6 Classes
-
 class IntBuilder extends BaseClass{
     constructor(value){
         super(value)
@@ -77,7 +76,8 @@ testIntBuilder
     .mod(3)
     .get()
 
-console.log(testIntBuilder.value)
+// console.log(testIntBuilder.value)
+console.log(IntBuilder.random(10, 2))
 
 //ES5 Prototypes
 function StringBuilder(value = '') {

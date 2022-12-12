@@ -58,7 +58,14 @@ class Remainder extends Divider {
     }
 }
 
-class Getter extends Remainder{
+class Random extends Remainder{
+    static random(from, to) {
+        const randomNumber = Math.floor(Math.random()*(to - from) + from);
+        return randomNumber;
+    }
+}
+
+class Getter extends Random{
     constructor(value) {
         super(value);
     }
@@ -67,6 +74,7 @@ class Getter extends Remainder{
         return this.value;
     }
 }
+
 class IntBuilder extends Getter {
     constructor(value) {
         super(value);
@@ -84,3 +92,4 @@ intBuilder
     .get()
 
 console.log(intBuilder.value)
+console.log(IntBuilder.random(10, 2))

@@ -27,13 +27,19 @@ class BaseClass {
         this.value = this.value % n;
         return this;
     }
+
     get(){
         return this.value;
+    }
+
+    static random(from, to) {
+        const randomNumber = Math.floor(Math.random()*(to - from) + from);
+        return randomNumber;
     }
 }
 
 class IntBuilder extends BaseClass {
-    constructor(value) {
+    constructor(value = 0) {
         super(value);
     }
 }
@@ -49,3 +55,4 @@ intBuilder
     .get()
 
 console.log(intBuilder.value)
+console.log(IntBuilder.random(10, 2))
